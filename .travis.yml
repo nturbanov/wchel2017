@@ -37,8 +37,8 @@ before_script:
 
   # Setup database
   - mysql -e 'CREATE DATABASE IF NOT EXISTS wordpress;'
-  - mysql -e 'CREATE USER 'wordpress'@'localhost' IDENTIFIED BY '25911661b5cd8309fad14674d9382d4d045d821334f93353';'
-  - mysql -e 'GRANT ALL PRIVILEGES ON wordpress . * TO 'wordpress'@'localhost';'
+  - mysql -e "CREATE USER 'wordpress'@'localhost' IDENTIFIED BY '25911661b5cd8309fad14674d9382d4d045d821334f93353';"
+  - mysql -e "GRANT ALL PRIVILEGES ON wordpress . * TO 'wordpress'@'localhost';"
   - mysql -e 'FLUSH PRIVILEGES;'
 
   # Install WP-CLI and wordpress database
